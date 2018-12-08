@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="91px" height="125px" viewBox="0 0 91 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0.868511057%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFA32A" offset="0%"></stop>
+            <stop stop-color="#FE9C24" offset="21.8862987%"></stop>
+            <stop stop-color="#FE941D" offset="40.220465%"></stop>
+            <stop stop-color="#FF7C01" offset="100%"></stop>
+        </linearGradient>
+        <path d="M16.6684647,33.8502638 L65.5,33.8502638 C67.709139,33.8502638 69.5,35.6411248 69.5,37.8502638 L69.5,45.3281127 C69.5,47.5040459 67.7606484,49.2808528 65.5852089,49.327205 L32.4147911,50.0339688 C30.2393516,50.080321 28.5,51.8571279 28.5,54.0330612 L28.5,62.8436485 C28.5,63.5990829 28.7139226,64.3390746 29.1170097,64.9779814 L32.8516335,70.8974871 C34.5001751,73.5104816 37.3737938,75.0952381 40.4633616,75.0952381 L69.5,75.0952381 L69.5,89.1904762 L44.5,89.1904762 L56.3451899,107.708422 C57.999253,110.294269 60.8571885,111.858767 63.9268025,111.858767 L69.5,111.858767 L69.5,123.340143 C69.5,124.16857 68.8284271,124.840143 68,124.840143 C67.4866631,124.840143 67.0089759,124.577634 66.7337733,124.1443 L13.2918602,39.9946848 C12.1075291,38.1298376 12.6591965,35.6579903 14.5240437,34.4736592 C15.1651718,34.0664902 15.9089703,33.8502638 16.6684647,33.8502638 Z" id="path-2"></path>
+        <filter x="-55.5%" y="-34.9%" width="208.1%" height="157.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="-4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.329411765   0 0 0 0 0.670588235   0 0 0 0 1  0 0 0 0.148352582 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.962588356">
+        <g id="Color-palette" transform="translate(-261.000000, -580.000000)">
+            <g id="brand" transform="translate(265.000000, 568.000000)">
+                <g id="Path-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

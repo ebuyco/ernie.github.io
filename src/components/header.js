@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components';
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+import logo from '../images/fulll.svg';
+
+const HeaderWrapper = styled .div `
+    background: rebeccapurple;
+    marginBottom: 1.45rem;
+`;
+
+const Header = () => (
+  <HeaderWrapper>
     <div
       style={{
         margin: '0 auto',
@@ -23,11 +26,21 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <img className="logo" src={logo} alt="logo" />
         </Link>
       </h1>
     </div>
-  </div>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
+    </nav>
+  </HeaderWrapper>
 )
 
 export default Header
