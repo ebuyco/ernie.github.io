@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
 
-import logo from '../images/fulll.svg';
+import logo from '../images/fill.svg';
 
 const HeaderWrapper = styled .div `
-    background: rebeccapurple;
+    background: linear-gradient(-150deg, #5449D2 0%, #60619F 97%);
     marginBottom: 1.45rem;
 `;
 
@@ -26,7 +26,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          <img className="logo" src={logo} alt="logo" />
+         <img className="logo" src={logo} alt="logo" />
         </Link>
       </h1>
     </div>
