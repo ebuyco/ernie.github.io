@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
 import Header from './header'
 import './layout.css'
 
@@ -13,6 +12,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            desc
           }
         }
       }
@@ -21,14 +21,14 @@ const Layout = ({ children }) => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}
-          meta={[
+            meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title}  data={ data }/>
         <div
           style={{
             margin: '0 auto',
@@ -49,3 +49,4 @@ Layout.propTypes = {
 }
 
 export default Layout
+
