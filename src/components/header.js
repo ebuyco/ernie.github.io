@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
 
-import logo from '../images/brand-icon.svg';
+import logo from '../images/brand.png';
 
 const HeaderWrapper = styled .div `
     background: linear-gradient(-150deg, #5449D2 0%, #60619F 97%);
