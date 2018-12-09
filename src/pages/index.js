@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 const IndexPage = ({ data }) => (
   <Layout>
     <h1>{data.site.siteMetadata.title}</h1>
-    <Img resolutions={data.file.childImageSharp.resolutions} />
+    <Img fluid={data.file.childImageSharp.fluid} />
     <p>{data.site.siteMetadata.desc}</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
@@ -28,12 +28,12 @@ export const query = graphql`
               desc
            }
     }
-    file(relativePath: { eq: "images/wrapper.jpg" }) {
-      childImageSharp {
-            fixed(width: 125, height: 125) {
-          ...GatsbyImageSharpFixed
+    file(relativePath: { regex: "/wrapper.jpg/" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
         }
-      }
-    }
 }
 `
