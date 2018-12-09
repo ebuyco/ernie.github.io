@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components';
-
+import Img from "gatsby-image";
 import logo from '../images/brand.png';
+
 
 const HeaderWrapper = styled .div `
     background: linear-gradient(-150deg, #5449D2 0%, #60619F 97%);
     marginBottom: 1.45rem;
+    overflow: hidden;
+    position: relative;
+    height: 50vh;
     h1 {
       img {
         height: 80px;
@@ -14,6 +18,13 @@ const HeaderWrapper = styled .div `
     }
 `;
 
+const HeaderContainer = styled.div`
+      margin: 0 auto;
+      max-width: 960px;
+      padding: 1.45rem 1.0875rem;
+      position: relative;
+      z-index: 2;
+`
 const Logo = styled.img `
   width: 100%;
   max-width: 15%;
@@ -23,8 +34,10 @@ const Logo = styled.img `
   
   `;
 
+
 const Header = ({ data }) => (
   <HeaderWrapper>
+    <HeaderContainer>
     <div
       style={{
         margin: '0 auto',
@@ -56,6 +69,15 @@ const Header = ({ data }) => (
         </li>
       </ul>
     </nav>
+    </HeaderContainer>
+    <Img style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%'
+    }}
+     fluid={data.file.childImageSharp.fluid} />
   </HeaderWrapper>
 )
 
