@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
             desc
           }
         }
-        file(relativePath: { regex: "/wrapper.jpg/" }) {
+        file(relativePath: { regex: "/office.jpeg/" }) {
           childImageSharp {
             fluid(maxWidth: 1240) {
               ...GatsbyImageSharpFluid_tracedSVG
