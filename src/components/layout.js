@@ -56,21 +56,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
- query LayoutQuery {
-  	site {
-          siteMetadata {
-              title
-              desc
-           }
-    }
-    file(relativePath: { regex: "/wrapper.jpg/" }) {
-          childImageSharp {
-            fluid(maxWidth: 1240) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-}
-`

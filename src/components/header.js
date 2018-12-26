@@ -5,9 +5,10 @@ import Img from "gatsby-image";
 import logo from '../images/brand.png';
 
 
+
 const HeaderWrapper = styled .div `
     background: linear-gradient(-150deg, #5449D2 0%, #60619F 97%);
-    marginBottom: 1.45rem;
+    marginBottom: 1.65rem;
     overflow: hidden;
     position: relative;
     height: 50vh;
@@ -18,12 +19,15 @@ const HeaderWrapper = styled .div `
     }
 `;
 
+
+
 const HeaderContainer = styled.div`
       margin: 0 auto;
       max-width: 960px;
       padding: 1.45rem 1.0875rem;
       position: relative;
       z-index: 2;
+     
 `
 const Logo = styled.img `
   width: 100%;
@@ -67,6 +71,9 @@ const Header = ({ data }) => (
         <li>
           <Link to="/about">About</Link>
         </li>
+        <li>
+          <Link to="/facebook">FacebookPage</Link>
+        </li>
       </ul>
     </nav>
     </HeaderContainer>
@@ -75,7 +82,8 @@ const Header = ({ data }) => (
         left: 0,
         top: 0,
         width: '100%',
-        height: '100%'
+        height: '100%',
+        marginBottom: '1.2rem'
     }}
      fluid={data.file.childImageSharp.fluid} />
   </HeaderWrapper>
