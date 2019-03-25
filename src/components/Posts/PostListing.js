@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+
 
 
 const PostListing = ({post}) => <article>
@@ -8,9 +8,9 @@ const PostListing = ({post}) => <article>
     {/* <div dangerouslySetInnerHTML={{
         __html: post.html
     }} /> */}
-    <h2>Post</h2>
-    <p>{post.excerpt}</p>
    
+    <h3>Post</h3>
+    <p>{post.excerpt}</p>
 </article>;
 
 

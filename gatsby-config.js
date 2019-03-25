@@ -16,12 +16,10 @@ module.exports = {
       },
     },
     {
-      resolve:  'gatsby-transformer-remark',
-      options: {
-       excerpt_seperator: `
-       <!-- end -->
-       `
-      },
+      "resolve": `gatsby-transformer-remark`,
+      "options": {
+        "excerpt_separator": `<!-- end -->`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,5 +45,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    
   ],
 }

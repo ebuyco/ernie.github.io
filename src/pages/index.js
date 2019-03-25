@@ -7,8 +7,9 @@ import PostListing from '../components/Posts/PostListing';
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>{data.site.siteMetadata.title}</h1>
-    <p>{data.site.siteMetadata.desc}</p>
+    {/* <h1>{data.site.siteMetadata.title}</h1>
+    <p>{data.site.siteMetadata.desc}</p> */}
+    <h2>Posts</h2>
     {data.allMarkdownRemark.edges.map(({node}) => (
     <PostListing key={node.id} post={node} />
     ))}

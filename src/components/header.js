@@ -5,20 +5,18 @@ import Img from "gatsby-image";
 import logo from '../images/brand.png';
 
 
-
-const HeaderWrapper = styled .div `
+const HeaderWrapper = styled.div `
     background: linear-gradient(-150deg, #5449D2 0%, #60619F 97%);
-    marginBottom: 1.65rem;
+    margin-bottom: 1.65rem;
     overflow: hidden;
     position: relative;
-    height: 50vh;
+    height: 70vh;
     h1 {
       img {
         height: 80px;
       }
     }
 `;
-
 
 
 const HeaderContainer = styled.div`
@@ -37,6 +35,7 @@ const Logo = styled.img `
   margin: 0;
   
   `;
+
 
 
 const Header = ({ data }) => (
