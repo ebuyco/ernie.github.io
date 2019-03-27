@@ -1,8 +1,10 @@
 import React from "react";
+import PostStyle from '../../styles/PostStyle';
 
 
-
-const PostListing = ({post}) => <article>
+const PostListing = ({post}) => 
+    <PostStyle>
+        <article>
     {/* <h3>{post.frontmatter.title}</h3>
     <span>{post.frontmatter.date}</span> */}
     {/* <div dangerouslySetInnerHTML={{
@@ -11,7 +13,10 @@ const PostListing = ({post}) => <article>
    
     <h3>Post</h3>
     <p>{post.excerpt}</p>
-</article>;
+    
+    </article>
+    </PostStyle>
+;
 
 
 export default PostListing;

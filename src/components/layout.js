@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
-import './layout.css'
+import './layout.css';
+import GlobalStyle from '../styles/Global';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,7 +18,7 @@ const Layout = ({ children }) => (
         }
         file(relativePath: { regex: "/office.jpeg/" }) {
           childImageSharp {
-            fluid(maxWidth: 1240) {
+            fluid(maxWidth: 1240 ) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+       <GlobalStyle>
         <Helmet
           title={data.site.siteMetadata.title}
             meta={[
@@ -33,8 +35,11 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <html lang="en" />
+       
+        <html lang="en" />
+          
         </Helmet>
+        </GlobalStyle>  
         <Header siteTitle={data.site.siteMetadata.title}  data={ data }/>
         <div
           style={{
@@ -55,4 +60,30 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Layout;
+
+export const query = graphql`
+ query LayoutQuery {
+  	site {
+          siteMetadata {
+              title
+              desc
+           }
+    }
+    allMarkdownRemark {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMM DD YYYY")
+        }
+        html
+        excerpt
+      }
+    }
+  }
+}
+`
+
+

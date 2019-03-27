@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'WebHooks',
-    desc: "A new content"
+    title: 'Gatsby2',
+    desc: "Beginner Guide"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `img`,
         path: `${__dirname}/src/images`,
       },
     },
