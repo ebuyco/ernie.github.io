@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const HeaderContainer = styled.div`
       margin: 0 auto;
@@ -9,10 +9,9 @@ const HeaderContainer = styled.div`
       font-family: 'Montserrat', sans-serif;   
       display: flex;
       justify-content: space-between;
-`;
+`
 
-
-const HeaderWrapper = styled.div `
+const HeaderWrapper = styled.div`
     background: linear-gradient(-150deg, #5449D2 0%, #60619F 97%);
     margin-bottom: 1.65rem;
     overflow: hidden;
@@ -25,7 +24,7 @@ const HeaderWrapper = styled.div `
         height: 100%;
       }
     }
-`;
+`
 
 const WrapperImg = styled.img`
         position: absolute;
@@ -35,9 +34,9 @@ const WrapperImg = styled.img`
         height: 100%;
         margin-bottom: 1.2rem;
         font-family: 'Montserrat', sans-serif; 
-`;
+`
 
-const Logo = styled.img `
+const Logo = styled.img`
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   max-width: 80%;
@@ -45,7 +44,7 @@ const Logo = styled.img `
   box-sizing: border-box;
   margin: 0;
   
-  `;
+  `
 
 const HeaderNav = styled.nav`
     color: #524763;
@@ -77,6 +76,7 @@ const HeaderNav = styled.nav`
        
     }
     
-`;
+`
 
-export { HeaderContainer, HeaderWrapper, Logo, HeaderNav, WrapperImg} ;
+export { HeaderContainer, HeaderWrapper,
+  Logo, HeaderNav, WrapperImg }

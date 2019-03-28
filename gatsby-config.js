@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby2',
-    desc: "Beginner Guide"
+    desc: 'Beginner Guide'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,24 +12,34 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${ __dirname }/src/`,
       },
     },
     {
-      "resolve": `gatsby-transformer-remark`,
-      "options": {
-        "excerpt_separator": `<!-- end -->`
+      'resolve': `gatsby-transformer-remark`,
+      'options': {
+        'excerpt_separator': `<!-- end -->`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
-        path: `${__dirname}/src/images`,
+        path: `${ __dirname }/src/images`,
       },
     },
-    
-  
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -45,6 +55,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-    
+
   ],
 }

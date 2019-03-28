@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
-import './layout.css';
-import GlobalStyle from '../styles/Global';
+import './layout.css'
+import GlobalStyle from '../styles/Global'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,19 +28,19 @@ const Layout = ({ children }) => (
     render={data => (
       <>
        <GlobalStyle>
-        <Helmet
-          title={data.site.siteMetadata.title}
-            meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-       
-        <html lang="en" />
-          
-        </Helmet>
-        </GlobalStyle>  
-        <Header siteTitle={data.site.siteMetadata.title}  data={ data }/>
+         <Helmet
+           title={data.site.siteMetadata.title}
+           meta={[
+             { name: 'description', content: 'Sample' },
+             { name: 'keywords', content: 'sample, something' },
+           ]}
+         >
+
+           <html lang="en" />
+
+         </Helmet>
+       </GlobalStyle>
+        <Header siteTitle={data.site.siteMetadata.title} data={ data }/>
         <div
           style={{
             margin: '0 auto',
@@ -60,7 +60,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout;
+export default Layout
 
 export const query = graphql`
  query LayoutQuery {
@@ -85,5 +85,3 @@ export const query = graphql`
   }
 }
 `
-
-

@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from 'styled-components'
 
 const PostStyle = styled.div`
     font-family: 'Montserrat', sans-serif;
@@ -13,6 +12,6 @@ const PostStyle = styled.div`
     h3 {
         font-size: 1.3rem;
     }
-`;
+`
 
-export default PostStyle;
+export default PostStyle
