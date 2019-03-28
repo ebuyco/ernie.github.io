@@ -26,7 +26,7 @@ export default IndexPage
 
 export const query = graphql`
  query SiteMeta {
-  	site {
+  site {
           siteMetadata {
               title
               desc

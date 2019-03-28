@@ -64,7 +64,7 @@ export default Layout
 
 export const query = graphql`
  query LayoutQuery {
-  	site {
+  site {
           siteMetadata {
               title
               desc

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Img from 'gatsby-image'
 import logo from '../images/big-investiment.svg'
 import { HeaderContainer, HeaderWrapper,
