@@ -6,7 +6,7 @@ import Header from './header'
 import './layout.css'
 import GlobalStyle from '../styles/Global'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -40,7 +40,9 @@ const Layout = ({ children }) => (
 
          </Helmet>
        </GlobalStyle>
-        <Header siteTitle={data.site.siteMetadata.title} data={ data }/>
+        <Header siteTitle={data.site.siteMetadata.title}
+          data={ data }
+          location={location}/>
         <div
           style={{
             margin: '0 auto',
