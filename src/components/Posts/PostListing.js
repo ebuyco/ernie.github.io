@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import PostStyle from '../../styles/PostStyle'
 
 const PostListing = ({ post }) =>
@@ -10,7 +11,9 @@ const PostListing = ({ post }) =>
         __html: post.html
     }} /> */}
 
-      <h3>Post</h3>
+      <h3><Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+      </h3>
+      <span>{post.frontmatter.date}</span>
       <p>{post.excerpt}</p>
 
     </article>
