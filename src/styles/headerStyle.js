@@ -47,7 +47,7 @@ const Logo = styled.img`
   `
 
 const HeaderNav = styled.nav`
-    color: #524763;
+    color: #F2F2F2;
     font-family: 'Montserrat', sans-serif;
     ul {
         list-style:none;
@@ -57,7 +57,7 @@ const HeaderNav = styled.nav`
         padding: 2rem;
             a {
                 text-decoration: none;
-                color: #524763;
+                color:  #F2F2F2;
                   &:hover{
                         color:#21c657;
                         border-bottom: 3px solid #524763;

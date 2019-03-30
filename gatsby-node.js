@@ -37,7 +37,11 @@ exports.createPages = ({ graphql, actions }) => {
                     fields{
                       slug
                     }
-                 }
+                    frontmatter {
+                      title
+                      date(formatString: "MMM DD YYYY")
+                    }
+                  }
                 }
               }
         }

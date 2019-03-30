@@ -1,7 +1,7 @@
 ---
 
-title: "Welcome to the PWA static app"
-date: "2018-12-26"
+title: "Third Blog"
+date: "2019-12-26"
 
 ---
 

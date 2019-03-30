@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Image from '../components/image'
 import PostListing from '../components/Posts/PostListing'
@@ -32,7 +32,10 @@ export const query = graphql`
               desc
            }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {
+      fields: [frontmatter___date],
+      order: DESC
+    }) {
         edges {
           node {
             id
