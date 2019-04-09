@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link, graphql, navigate } from 'gatsby'
 import { AboutStyle } from '../styles/About'
 import AImage from '../components/aimg'
 import GlobalStyle from '../styles/Global'
@@ -37,7 +37,7 @@ class AboutPage extends Component {
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/facebook">FacebookPage</Link>
+                  <Link to="/blog">FacebookPage</Link>
                 </li>
               </ul>
             </HeaderNav>
@@ -47,7 +47,7 @@ class AboutPage extends Component {
           </div>
         </HeaderWrapper>
 
-        <Link to="/page-2/">Go back to Page2</Link>
+        <a onClick={() => navigate(`/`)}>Click to go to home</a>
       </AboutStyle>
     )
   }

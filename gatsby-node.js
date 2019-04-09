@@ -5,6 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -29,23 +30,22 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
     graphql(`
-        {
-            allMarkdownRemark {
-                edges {
-                  node {
-                    id
-                    fields{
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date(formatString: "MMM DD YYYY")
-                    }
-                  }
-                }
-              }
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            fields{
+              slug
+            }
+            frontmatter {
+              title
+              date(formatString: "MMM DD YYYY")
+            }
+          }
         }
-    `).then(result => {
+      }
+    }`).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
           path: node.fields.slug,

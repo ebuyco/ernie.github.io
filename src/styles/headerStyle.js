@@ -16,7 +16,8 @@ const HeaderWrapper = styled.div`
     margin-bottom: 1.65rem;
     overflow: hidden;
     position: relative;
-    height: 40vh;
+    /* height: ${ ({ isHome }) => (isHome ? '70vh' : '20vh') }; */
+    height: 30vh;
     font-family: 'Montserrat', sans-serif;
    
     h1 {
@@ -49,13 +50,43 @@ const Logo = styled.img`
 const HeaderNav = styled.nav`
     color: #F2F2F2;
     font-family: 'Montserrat', sans-serif;
+    & nav.fixed-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12vh;
+        z-index: 20;
+        background-color: #002749;
+        color: #fff;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        opacity: 1;
+        transform: scale(1);
+        display:flex;
+        justify-content:center;
+        img {
+          max-width: 25%;
+          position: relative;
+          top: 0;
+          right:0;
+        }
+        ul{
+          @media only screen and (max-width: 720px) {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-rows: 4fr 4fr;
+          } 
+        }
+       
+    }
     ul {
         list-style:none;
-        display: flex;    
+        display: flex;   
         li {
         color: white;
         padding: 2rem;
-            a {
+               a {
                 text-decoration: none;
                 color:  #F2F2F2;
                   &:hover{

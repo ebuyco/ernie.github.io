@@ -68,26 +68,26 @@ Layout.propTypes = {
 
 export default Layout
 
-export const query = graphql`
- query LayoutQuery {
-  site {
-          siteMetadata {
-              title
-              desc
-           }
-    }
-    allMarkdownRemark {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "MMM DD YYYY")
-        }
-        html
-        excerpt
-      }
-    }
-  }
-}
-`
+// export const query = graphql`
+//  query LayoutQuery {
+//   site {
+//           siteMetadata {
+//               title
+//               desc
+//            }
+//     }
+//     allMarkdownRemark {
+//     edges {
+//       node {
+//         id
+//         frontmatter {
+//           title
+//           date(formatString: "MMM DD YYYY")
+//         }
+//         html
+//         excerpt
+//       }
+//     }
+//   }
+// }
+// `
