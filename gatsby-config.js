@@ -3,7 +3,6 @@ module.exports = {
     title: 'Gatsby2',
     desc: 'Beginner Guide'
   },
-  pathPrefix: '/exploring_gatsby_2',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -59,3 +58,6 @@ module.exports = {
 
   ],
 }
+
+// pathPrefix: '/exploring_gatsby_2',
+// "deploy": "gatsby build --prefix-paths && gh-pages -d public"
