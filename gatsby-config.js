@@ -61,3 +61,4 @@ module.exports = {
 
 // pathPrefix: '/exploring_gatsby_2',
 // "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+// "deploy": "gatsby build && gh-pages -d public -b gh-pages"
